@@ -1,0 +1,35 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+img('img/rub.png').top-rub
+		+img('img/rub.png').right-rub
+		+img('img/rub.png').bottom-rub
+		+img('img/scales.png').bottom-scales
+		.container
+			.row
+				.col-7
+					+b.section-title
+						h1 Обнуление долгов
+						h2 <span>Законно спишем долги и&nbsp;кредиты</span> через процедуру банкротства по&nbsp;127-ФЗ
+					+e.descr.P Мы 100% поможем, если вы подходите под процедуру банкротства. В случае, если не сможем помочь, мы гарантированно вернем вам деньги и выплатим долги за вас
+					ul
+						li За 10 дней избавим от угроз и звонков коллекторов
+						li Прекратим списываение денег с ваших счетов и карт
+						li Сохраним ваше имущество  
+					+e.btn(href="#") Бесплатная консультация
+				.col-5
+					+b.form
+						+e.descr Ответьте на 4 вопроса, укажите ваш номер телефона, и мы сообщим о возможности списания ваших долгов
+						+e.question Шаг 1. Выберите сумму вашего долга
+						+in-c('radio','До 300 000 ₽','debt')(checked)
+						+in-c('radio','От 300 000 ₽ до 1 000 000 ₽','debt')
+						+in-c('radio','Свыше 1 000 000 ₽','debt')
+						+in-c('radio','Не помню','debt')
+						+e.buttons
+							+e.btn--prev Назад
+							+e.btn--next Вперед
+
+
+
+						
+	// end headerBlock

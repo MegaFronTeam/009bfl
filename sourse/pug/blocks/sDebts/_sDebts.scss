@@ -1,0 +1,107 @@
+// start .sDebts
+.sDebts {
+	--sPT: #{rem(15)};
+	--sPB: #{rem(51)};
+	--sTPB: #{rem(24)};
+	.container {
+		position: relative;
+		&::after {
+			position: absolute;
+			display: inline-block;
+			content: '';
+			width: 768px;
+			height: 740px;
+			right: 0;
+			bottom: 0;
+			background: #BFD8FF;
+			filter: blur(111px);
+			z-index: -1;
+			@include media-breakpoint-down(sm) {
+				content: none;
+			}
+		}
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: #{rem(64)};
+		@include media-breakpoint-down(xl) {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+		@include media-breakpoint-down(sm) {
+			flex-wrap: nowrap;
+			--bs-gutter-x: #{rem(10)};
+		}
+	}
+	.swiper-slide {
+		@include media-breakpoint-down(xxl) {
+			height: auto;
+		}
+	}
+	.section-title{
+		h2 {
+			@include media-breakpoint-down(sm) {
+				color: $body-color;
+			}
+		}
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sDebts
+.debts-item {
+	display: flex;
+	flex-direction: column;
+	@include media-breakpoint-down(xxl) {
+		height: 100%;
+	}
+	&__img-wrap {
+		height: 123px;
+		box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.03);
+		border-radius: $border-radius;
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+	&__text-wrap {
+		padding: 32px;
+		min-height: 167px;
+		background: $white;
+		box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.03);
+		border-radius: $border-radius;
+		@include media-breakpoint-down(xl) {
+			padding: 16px;
+			flex-grow: 1;
+		}
+		@include media-breakpoint-down(xxl) {
+			flex-grow: 1;
+		}
+	}
+	&__title {
+		margin-bottom: 16px;
+		font-weight: 700;
+		font-size: rem(24);
+		@include media-breakpoint-down(xl) {
+			font-size: 18px;
+		}
+	}
+	&__descr {
+		font-size: 15px;
+		line-height: 160%;
+		color: $gray-600;
+		@include media-breakpoint-down(xl) {
+			font-size: 13px;
+		}
+	}
+}

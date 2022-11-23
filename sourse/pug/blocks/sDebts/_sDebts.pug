@@ -1,0 +1,25 @@
+mixin debtsItem(img, title, descr)
+	.col-sm-6.col-lg-4.swiper-slide
+		+b.debts-item
+			+e.img-wrap
+				+img(`img/debts-${img}.jpg`)
+			+e.text-wrap
+				+e.title= title
+				+e.descr= descr
+
+mixin sDebts(data)
+	// start sDebts
+	+b.SECTION.sDebts.section#sDebts&attributes(attributes)
+		.container
+			+b.section-title
+				h2 #[span Какие долги можно списать:]
+			.swiper.debts-slider--js(data-mobile="false")
+				+e.row.row.swiper-wrapper
+					+debtsItem('1', 'Кредиты, кредитки и займы', 'Не только основную часть кредита или займа, но и все начисленные проценты, неустойки, штрафы')
+					+debtsItem('2', 'Долги по ЖКХ', 'Не только основную часть кредита или займа, но и все начисленные проценты, неустойки, штрафы')
+					+debtsItem('3', 'Долги перед физ. и юр. лицами', 'Долги по договорам займа, распискам, по договорам на поставки товаров, выполнение работ, оказание услуг, по факту причинения имущественного ущерба')
+					+debtsItem('4', 'Штрафы', 'ГИБДД и иные административные штрафы')
+					+debtsItem('5', 'Налоги', 'Списать можно, но рекомендуем закрыть самостоятельно')
+					+debtsItem('6', 'Решения судов', 'Долги, образовавшиеся по решениям судов')
+
+	// end sDebts

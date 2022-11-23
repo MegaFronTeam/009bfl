@@ -1,0 +1,35 @@
+mixin price-item(title, date, price)
+	.col-12.col-lg-4
+		+b.price-item
+			+e.title= title
+			+e.date
+				+icon('calendar')
+				+e.mounth= date
+			+e.price!= price
+
+mixin sPrice(data)
+	// start sPrice
+	+b.SECTION.sPrice.section#sPrice&attributes(attributes)
+		+img('img/rub.png').sPrice__bg-top
+		+img('img/rub.png').sPrice__bg-bottom
+		.container
+			+b.section-title
+				h2 #[span Сколько] это стоит?				
+			+e.row.row
+				+price-item('Уменьшение платежей по кредитам', '4-6 месяцев', '<span> от 9 900₽</span> / в месяц')
+				+price-item('Реструктуризация', '5-7 месяцев', '<span> от 9 900₽</span> / в месяц')
+				+price-item('Полное списание долгов (банкротство физ. лиц)', '6-12 месяцев', '<span> от 11 900₽</span> / в месяц')
+			+e.descr В&nbsp;стоимость входит полное сопровождение процедуры от&nbsp;нас, также обязательные расходы на&nbsp;процедуру:
+			+e.points.UL
+				+e.point.LI Депозит арбитражного суда (ст. 20.6 п.2 вносится по реквизитам АС)
+				+e.point.LI Оплата публикаций (ст. 213.7 п.4 газета «Коммерсант» и сайт ЕФРСБ)
+				+e.point.LI Государственная пошлина
+				+e.point.LI Почтовые расходы
+				+e.point.LI Нотариальная доверенность
+			+e.points-caption *Обязательные расходы по делам о несостоятельности (банкротстве) регулируются 127-ФЗ
+			+e.callback
+				+e.callback-text
+					+e.callback-top У вас есть реальная возможность помочь себе! 
+					+e.callback-bottom Вы можете оформить услугу в рассрочку или оплатить ее полностью #[span с 10% скидкой]
+				+e.callback-btn Записаться на консультацию
+	// end sPrice

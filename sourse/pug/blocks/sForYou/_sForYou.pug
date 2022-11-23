@@ -1,0 +1,27 @@
+mixin for-you-item(icon,text)
+	.col-12.col-sm-6.col-md-4
+		+b.for-you-item
+			+icon(`for-you-${icon}`)
+			+e.text!= text
+
+mixin sForYou(data)
+	// start sForYou
+	+b.SECTION.sForYou.section#sForYou&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 #[span Это для вас], если:
+			+e.row.row
+				+for-you-item('1',`Вас постоянно <span> беспокоят коллекторы</span>, приставы и кредиторы`)
+				+for-you-item('2',`<span> Банки списывают</span> любые поступления на карты 
+и счета`)
+				+for-you-item('3',`<span>Нет возможности </span>платить по кредитам 
+и платежам`)
+				+for-you-item('4',`Вы устали жить <span> «в кредит»</span>`)
+				+for-you-item('5',`Хотите законно закрыть финансовые проблемы`)
+				+for-you-item('6',`На вас «свалились»
+ <span> огромные долги</span>`)
+			+e.test
+				+e.test-descr Пройдите тест, чтобы узнать возможность списания долгов
+				+e.test-btn(href="#") Пройти тест
+				+img('img/for-you-test.png').test-bg
+	// end sForYou

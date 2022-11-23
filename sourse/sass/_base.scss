@@ -123,7 +123,14 @@ main{
 // }
 
 
-
+h2 {
+	@include media-breakpoint-down(sm) {
+		font-size: rem(32);
+	}
+	span {
+		color: $primary;
+	}
+}
 
 
 
@@ -541,6 +548,7 @@ iframe {
 }
 
 @mixin main-btn {
+	padding: 20px 24px;
 	display: block;
 	background: linear-gradient(93.2deg, #FF595E 6.15%, #FE3B7A 96.84%);
 	border: 1px solid #FF3D7A;
@@ -548,6 +556,7 @@ iframe {
 	border-radius:$border-radius;
 	color: $white;
 	font-weight: 700;
+	text-align: center;
 	@include mt;
 	&:hover {
 		color: white;

@@ -1,4 +1,5 @@
 "use strict";
+
 const JSCCommon = { 
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -379,9 +380,25 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
-
 	});
-
+	
+	const debtsSlider = document.querySelector('.debts-slider--js');
+	let debtSwiper;
+	function debtsSLiderInit() {
+		if (window.innerWidth <= 576 && debtsSlider.dataset.mobile === 'false') {
+			debtSwiper = new Swiper(debtsSlider, {
+				slidesPerView: 1.05,
+			});
+			debtsSlider.dataset.mobile = 'true';
+		} else if (debtSwiper) {
+			debtsSlider.dataset.mobile = 'false';
+			debtSwiper.destroy();
+		}
+	}
+	debtsSLiderInit();
+	window.addEventListener('resize', () => {
+		debtsSLiderInit();
+	});
 	// modal window
 
 };

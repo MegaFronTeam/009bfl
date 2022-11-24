@@ -129,6 +129,9 @@ h2 {
 	}
 	span {
 		color: $primary;
+		@include media-breakpoint-down(sm) {
+			color: $body-color;
+		}
 	}
 }
 
@@ -142,6 +145,9 @@ h2 {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	&__caption {
+		color: $gray-600;
+	}
 }
 
 

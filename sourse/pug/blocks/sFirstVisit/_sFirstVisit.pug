@@ -1,0 +1,23 @@
+mixin visit-slide(img, title, descr)
+	.swiper-slide
+		+e.item
+			+e.img-wrap
+				+img(`img/visit-${img}.jpg`)
+			+e.text
+				+e.header!= title 
+				+e.descr!= descr
+
+mixin sFirstVisit(data)
+	// start sFirstVisit
+	+b.SECTION.sFirstVisit.section#sFirstVisit&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 Уже после #[span первой консультации:]
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+visit-slide('1', 'Навсегда забудете о&nbsp;коллекторах', 'Избавим от&nbsp;угроз и&nbsp;звонков коллекторов за&nbsp;10&nbsp;дней')
+					+visit-slide('2', 'Сохраните ваше имущество', 'Поможем в&nbsp;защите вашего имущества')
+					+visit-slide('3', 'Получите рассрочку для оплаты услуги', 'После получения положительного результата, мы&nbsp;предоставим вам рассрочку без участия банков')
+			+e.btn Получить консультацию
+					
+	// end sFirstVisit

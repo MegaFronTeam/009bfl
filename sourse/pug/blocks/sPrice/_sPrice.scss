@@ -32,7 +32,7 @@
 		bottom: -170px;
 		transform: rotate(25.68deg);
 		z-index: 0;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			display: none;
 		}
 	}

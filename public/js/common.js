@@ -381,6 +381,18 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 	});
+
+	const visitSlider = new Swiper('.sFirstVisit__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 'auto',
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		spaceBetween: 40,
+	});
 	
 	const debtsSlider = document.querySelector('.debts-slider--js');
 	let debtSwiper;
@@ -395,9 +407,24 @@ function eventHandler() {
 			debtSwiper.destroy();
 		}
 	}
+	const stepsSlider = document.querySelector('.sAloneSteps-slider--js');
+	let stepSwiper;
+	function stepsSliderInit() {
+		if (window.innerWidth <= 992 && stepsSlider.dataset.mobile === 'false') {
+			stepSwiper = new Swiper(stepsSlider, {
+				slidesPerView: 1.05,
+			});
+			stepsSlider.dataset.mobile = 'true';
+		} else if (stepsSlider) {
+			stepsSlider.dataset.mobile = 'false';
+			stepSwiper.destroy();
+		}
+	}
 	debtsSLiderInit();
+	stepsSliderInit();
 	window.addEventListener('resize', () => {
 		debtsSLiderInit();
+		stepsSliderInit();
 	});
 	// modal window
 

@@ -1,0 +1,25 @@
+mixin advantages-item(icon, text)
+	.col-12.col-md-6
+		+b.advantage
+			+img(`img/svg/${icon}.svg`)
+			+e.text!= text
+
+mixin sAdvantages(data)
+	// start sAdvantages
+	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Почему стоит обратиться #[span именно к нам:]
+				+e.capture Несколько фактов о нас:				
+			+e.row.row
+				+advantages-item('debt','Избавляем вас от угроз кредиторов и коллекторов <span> уже на 10 день</span>')
+				+advantages-item('calendar','Предоставляем рассрочку<br> <span>до 12 месяцев</span>')
+				+advantages-item('money-bag','Законно списали долговые <br>бязательства на сумму <span>более 970 млн.руб.</span>')
+				+advantages-item('card','<span>Отменяем взыскание</span> денежных средств с ваших счетов приставами')
+				+advantages-item('doc','Более <span>680 выигранных дел</span> <br>только за <span>2022 год</span>')
+				+advantages-item('best','Свой <span>арбитражный <br>управляющий</span> в штате')
+				+advantages-item('freedom','Освободили от долгов<br> <span>более 2000 человек</span>')
+				+advantages-item('consultation','<span>Бесплатная консультация</span> и полное сопровождение на протяжении всей процедуры')
+				+advantages-item('balance','На рынке юридических <br>услуг <span>с 2011 года</span>')
+				+advantages-item('russia','Мы работаем<br> <span>по всей России</span>')
+	// end sAdvantages

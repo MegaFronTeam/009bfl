@@ -1,0 +1,35 @@
+mixin specialist(img, name, position, standing, counter)
+	+e.slide.swiper-slide
+		+e.item
+			+e.img-wrap
+				+img(`img/specialist-${img}.png`)
+			+e.descr
+				+e.name!= name
+				+e.position= position 
+				if standing
+					+e.standing= standing
+				if counter
+					+e.counter
+						+e.counter-number= counter
+						+e.counter-text отмененых судебных решений
+
+mixin sSpecialists(data)
+	// start sSpecialists
+	+b.SECTION.sSpecialists.section#sSpecialists&attributes(attributes)
+		.container
+			+b.section-title
+				h2 #[span Более 10 лет] судебной практики
+				+e.caption Наши специалисты:
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+specialist('1', 'Иванова <br>Юлия', 'Ведущий юрист', 'стаж - 5 лет', '340')
+					+specialist('2', 'Пушкина  <br>Олеся', 'Ведущий юрист')
+					+specialist('3', 'Крошкин <br>Михаил', 'Арбитражный управляющий', 'стаж - 12 лет	', '620')
+					+specialist('4', 'Кудкудашкин <br>Алексей', 'Ведущий юрист', 'стаж - 5 лет')
+					+specialist('1', 'Иванова <br>Юлия', 'Ведущий юрист', 'стаж - 5 лет', '340')
+					+specialist('2', 'Пушкина  <br>Олеся', 'Ведущий юрист')
+				.slider-controls
+					.swiper-pagination
+					.navigation
+						+arrow
+	// end sSpecialists

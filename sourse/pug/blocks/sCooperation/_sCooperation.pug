@@ -1,0 +1,25 @@
+mixin cooperation-item(img)
+	+e.slide.swiper-slide
+		+e.item
+			+img(`img/cooperation-${img}.jpg`)
+
+
+mixin sCooperation(data)
+	// start sCooperation
+	+b.SECTION.sCooperation.section#sCooperation&attributes(attributes)
+		.container
+			+b.section-title
+				h2 #[span Официально сотрудничаем]  с&nbsp;государственными структурами&nbsp;РФ
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+cooperation-item(1)
+					+cooperation-item(2)
+					+cooperation-item(3)
+					+cooperation-item(4)
+					+cooperation-item(3)
+					+cooperation-item(4)
+				.slider-controls
+					.swiper-pagination
+					.navigation
+						+arrow
+	// end sCooperation

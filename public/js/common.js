@@ -390,8 +390,147 @@ function eventHandler() {
 		loopFillGroupWithBlank: true,
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
+		freeModeMomentum: true,		
+		breakpoints: {
+			320: {
+				spaceBetween: 16,
+				slidesPerView:1.1,
+			},
+			576: {
+				spaceBetween: 16,
+				slidesPerView: 2.1,
+			},
+			992: {
+				spaceBetween: 40,
+				slidesPerView:3,
+			},
+		}
+	});
+	const sWriteDownsSwiper = new Swiper('.sWriteDowns__slider--js', {
+		// ...defaultSl,
+		freeMode: true,
+		// loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
 		freeModeMomentum: true,
-		spaceBetween: 40,
+		navigation: {
+			nextEl: '.sWriteDowns .swiper-button-next',
+			prevEl: '.sWriteDowns .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sWriteDowns .swiper-pagination',
+			type: 'bullets',
+			clickable: 'true',
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 16,
+				slidesPerView:1.1,
+			},
+			576: {
+				spaceBetween: 16,
+				slidesPerView: 2.1,
+			},
+			992: {
+				spaceBetween: 40,
+				slidesPerView:3,
+			},
+		}
+	});
+	const sSpecialistsSwiper = new Swiper('.sSpecialists__slider--js', {
+		// ...defaultSl,
+		freeMode: true,
+		// loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		navigation: {
+			nextEl: '.sSpecialists .swiper-button-next',
+			prevEl: '.sSpecialists .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sSpecialists .swiper-pagination',
+			type: 'bullets',
+			clickable: 'true',
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 16,
+				slidesPerView:1.1,
+			},
+			576: {
+				spaceBetween: 16,
+				slidesPerView: 2.1,
+			},
+			992: {
+				spaceBetween: 40,
+				slidesPerView:3,
+			},
+			1200: {
+				spaceBetween: 40,
+				slidesPerView:4,
+			},
+		}
+	});
+	const sCooperationSwiper = new Swiper('.sCooperation__slider--js', {
+		// ...defaultSl,
+		freeMode: true,
+		// loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		navigation: {
+			nextEl: '.sCooperation .swiper-button-next',
+			prevEl: '.sCooperation .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sCooperation .swiper-pagination',
+			type: 'bullets',
+			clickable: 'true',
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 16,
+				slidesPerView:1.4,
+			},
+			576: {
+				spaceBetween: 16,
+				slidesPerView: 2.1,
+			},
+			992: {
+				spaceBetween: 40,
+				slidesPerView:3,
+			},
+			1200: {
+				spaceBetween: 40,
+				slidesPerView:4,
+			},
+		}
+	});
+	const sFeedBackSwiper = new Swiper('.sFeedBack__slider--js', {
+		freeMode: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+		navigation: {
+			nextEl: '.sFeedBack .swiper-button-next',
+			prevEl: '.sFeedBack .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sFeedBack .swiper-pagination',
+			type: 'bullets',
+			clickable: 'true',
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 16,
+				slidesPerView:1,
+			},
+			992: {
+				spaceBetween: 40,
+				slidesPerView: 2,
+			},
+		}
 	});
 	
 	const debtsSlider = document.querySelector('.debts-slider--js');

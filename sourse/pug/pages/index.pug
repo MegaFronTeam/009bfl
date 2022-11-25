@@ -19,6 +19,11 @@ include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sAloneSteps/_sAloneSteps.pug
 include ../blocks/sArbitration/_sArbitration.pug
 include ../blocks/sFirstVisit/_sFirstVisit.pug
+include ../blocks/sWriteDowns/_sWriteDowns.pug
+include ../blocks/sSpecialists/_sSpecialists.pug
+include ../blocks/sCooperation/_sCooperation.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sFaq/_sFaq.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -45,7 +50,11 @@ block pagecontent
 		+sAdvantages
 		+sArbitration
 		+sFirstVisit
-		+sForm()
+		+sWriteDowns
+		+sSpecialists
+		+sCooperation
+		+sFeedBack
+		+sFaq
 		+sContact()
 		
 	+footer()

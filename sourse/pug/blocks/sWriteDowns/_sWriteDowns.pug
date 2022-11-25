@@ -1,0 +1,38 @@
+mixin write-downs-docs(img="1", sum="850 000 руб", off="850 000 руб",asset="Сохранили", nubmer="25659-ИТ-Сп")
+	+e.slide.swiper-slide
+		+e.item
+			+e.img-wrap
+				+img(`img/write-down-${img}.jpg`)
+			+e.descr.DL
+				+e.row
+					dt Сумма долга:
+					dd= sum
+				+e.row
+					dt Списано
+					dd.active= off
+				+e.row
+					dt Имущество
+					dd= asset
+				+e.row
+					dt № Дела
+					dd= nubmer
+
+mixin sWriteDowns(data)
+	// start sWriteDowns
+	+b.SECTION.sWriteDowns.section#sWriteDowns&attributes(attributes)
+		.container
+			+b.section-title
+				h2 #[span Законно списали] долговые обязательства в&nbsp;пользу наших клиентов
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+write-downs-docs
+					+write-downs-docs
+					+write-downs-docs
+					+write-downs-docs
+					+write-downs-docs
+					+write-downs-docs
+				.slider-controls
+					.swiper-pagination
+					.navigation
+						+arrow
+	// end sWriteDowns

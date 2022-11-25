@@ -1,0 +1,54 @@
+// start .sCooperation
+.sCooperation {
+	--sPT: #{rem(30)};
+	--sPB: #{rem(118)};
+	--sTPB: #{rem(132)};
+	background: $white;
+	border-bottom-left-radius: 70px;
+	border-bottom-right-radius: 70px;
+	@include media-breakpoint-down(md) {
+		--sPT: #{rem(24)};
+		--sTB: #{rem(40)};
+		--sTPB: #{rem(40)};
+		border-bottom-left-radius: 24px;
+		border-bottom-right-radius: 24px;
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		max-width: 791px;
+		h2 {
+			@media (min-width: 320px) and (max-width: 360px) {
+				font-size: rem(24);
+			}
+		}
+	}
+	&__col{
+
+	}
+	.swiper-wrapper {
+		margin-bottom: 58px;
+	}
+	&__slide {
+		height: auto;
+	}
+	&__item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		img {
+			max-width: 100%;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCooperation

@@ -391,6 +391,7 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,		
+		navigation: false,
 		breakpoints: {
 			320: {
 				spaceBetween: 16,

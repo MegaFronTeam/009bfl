@@ -57,7 +57,6 @@
 		&.active {
 			.dd-group__head::before {
 				transform: rotate(90deg);
-				transform-origin: center center;
 			}
 			.dd-group__head::after {
 				opacity: 0;
@@ -93,6 +92,7 @@
 			right: 28px;
 			opacity: 1;
 			transform: translateY(-50%);
+			transform-origin: 4px 4px;
 			@include mt;
 		}
 	}

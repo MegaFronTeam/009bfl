@@ -2,7 +2,7 @@
 .sResponsibility {
 	--sPT: #{rem(176)};
 	--sPB: #{rem(115)};
-	--sTPB: #{rem(24)};
+	--sTPB: #{rem(15)};
 	@include media-breakpoint-down(xl) {
 		--sPT: #{rem(50)};
 		--sPB: #{rem(50)};
@@ -75,7 +75,7 @@
 	&__btn {
 		@include main-btn;
 		margin-bottom: 24px;
-		max-width: 500px;
+		max-width: 505px;
 		@include media-breakpoint-down(xl) {
 			max-width: none;
 		}

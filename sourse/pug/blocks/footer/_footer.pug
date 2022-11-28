@@ -1,9 +1,34 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
+			+e.top-row.row
+				+e.left-col.col-md-6 
+					+e.address.DL
+						+e.address-row
+							+e.address-term.DT Адрес офиса:
+							+e.address-def.DD
+								address ул. Рождественка, д.5/7, стр.1, 3 этаж, офис 3
+						+e.address-row
+							+e.address-term.DT Ближайшее метро: 
+							+e.address-def.DD Кузнецкий мост в 1 минуте ходьбы
+					+e.schedule 
+						+icon('clock')
+						| Работаем ежедневно с 10 до 19.
+				+e.right-col.col-md-6 
+					+e.phone-list.UL
+						+e.tel.LI(href="tel:+78008245247") 8 800 824 52 47
+						+e.wa.LI(href="#")
+							+img('img/whatsapp.png')
+						+e.telegram.LI(href="#")
+							+img('img/telegram.png')
+					+e.mail(href="mailto:info@obnulenie-dolgov.ru") info@obnulenie-dolgov.ru
+					+e.callback
+						+icon('phone')
+						| Заказать звонок
+			+e.bottom-row.row
 				.col-auto
+					+e.copyright © 2022. БФЛ. Списываем долги с 2011 г.
+				.col-auto
+					+e.legal ИП Мисунов Александр Сергеевич   |   ИНН 772703358238   |   ОГРНИП 320774600189442
+				.col-auto
+					+e.policy(href="#") Политика конфиденциальности

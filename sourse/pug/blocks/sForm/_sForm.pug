@@ -2,12 +2,18 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
+			+b.section-title
+				h2 Остались вопросы?				
 			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
+				+e.form-title Задайте нам интересующие вас вопросы и получите ответ в течение 15 минут
+				.form-floating
+					input.form-control(type='tel' placeholder="+7 ___ ___ __ __" id="tel" required)
+					label(for='tel') Ваш номер телефона*
+				.form-floating
+					textarea.form-control(placeholder="Введите" id="textarea" required)
+					label(for="textarea") Ваш вопрос:
+				+btn('Отправить','button') 
+				+e.small Ввод номера телефона подтверждает ваше согласие c #[a(href="#") условиями передачи информации]
+			+img('img/question.png').bg-question.bg-question--big
+			+img('img/question.png').bg-question.bg-question--small
 	// end sForm

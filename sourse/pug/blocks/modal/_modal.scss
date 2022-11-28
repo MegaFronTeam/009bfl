@@ -10,11 +10,16 @@
 	// display: block;
 	background-color: #fff;
 	max-width: 100%;
+	// max-width: 896px;
 	position: relative;
-	width: rem(1500);
+	width: 896px;
 	// min-height: 100%; 
-	padding: 40px;
-
+	padding: 32px;
+	box-shadow: 0px 23px 48px rgba(27, 69, 137, 0.21);
+	border-radius: 16px;
+	@include media-breakpoint-down(md) {
+		padding: 16px;
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -100,7 +105,78 @@ a {
 		}
 	}
 }
-
+.modal-item {
+	position: relative;
+	.bg-img {
+		position: absolute;
+		right: 0;
+		bottom: -32px;
+		@include media-breakpoint-down(md) {
+			width: 160px;
+			height: 142px;
+			right: 30px;
+			top: calc(-16px - 142px);
+		}
+	}
+}
+.carousel__button.is-close {
+	top: 32px !important;
+	right: 32px !important;
+	@include media-breakpoint-down(md) {
+		top: 16px !important;
+		right: 16px !important;
+	}
+	svg {
+		color: #282533;
+	}
+	
+}
+.form-wrap {
+	position: relative;
+	max-width: 380px;
+	z-index: 5;
+	@include media-breakpoint-down(md) {
+		max-width: none;
+	}
+	&__title {
+		margin-bottom: 10px;
+		padding-right: 60px;
+		font-weight: 700;
+		font-size: rem(24);
+		@include media-breakpoint-down(md) {
+			font-size:18px;
+		}
+	}
+	&__descr {
+		max-width: 340px;
+		margin-bottom: 24px;
+		font-size: 15px;
+		line-height: 160%;
+		color: $gray-600;
+		@include media-breakpoint-down(md) {
+			font-size:13px;
+		}
+	}
+	.form-control {
+		margin-bottom: 16px;
+		border: 1px solid #D7D7D7;
+		border-radius: 20px;
+		background-color: transparent;
+	}
+	&__btn {
+		@extend .btn, .btn-primary;
+		width: 100%;
+		margin-bottom: 24px;
+	}
+	&__small {
+		font-size: 12px;
+		line-height: 150%;
+		color: #A2A2A2;
+		a {
+			color: $primary;
+		}
+	}
+}
 
 // 
 @include media-breakpoint-up(xl) {}

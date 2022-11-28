@@ -581,6 +581,7 @@ iframe {
 	color: $white;
 	font-weight: 700;
 	text-align: center;
+	font-size: rem(18);
 	@include mt;
 	&:hover {
 		color: white;

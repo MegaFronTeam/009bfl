@@ -1,8 +1,12 @@
 
+	.fixed {
+		--mobile-color: #fff;
+	}
 	// start .topLine
 	.topLine {		 
 	--sPT: #{rem(0)};
 	--sPB: #{rem(0)};
+	transition: backgroung-color .3s ease-in-out;
 	// --sTPB: #{rem()};
 	&__container {
 		padding-top: 32px;
@@ -18,9 +22,24 @@
 		}
 	}
 	&__mobile-wrap {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@include media-breakpoint-down(lg) {
+			z-index: 1000;
+			&::before {
+				position: absolute;
+				content: '';
+				top: -32px;
+				left: -50vw;
+				width: 200vw;
+				height: calc(100% + 64px);
+				z-index: -1;
+				background-color: var(--mobile-color);
+				pointer-events: none;
+			}
+		}
 		@include media-breakpoint-down(lg) {
 			& > * {
 				width: 30%;

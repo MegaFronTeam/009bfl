@@ -23,13 +23,6 @@ mixin mob-mnu()
 					+icon('phone')
 		+e.inner
 			+mnu()
-		+e.bottom
-			.col-auto.col-sm-6.col-lg-auto
-				+e.tel
-					+e.tel-link(href="tel:+78008245247") 8 800 824 52 47
-					+e.tel-caption Звонок на номер бесплатный
-			.col-auto.col-sm-6.col-soc.col-lg-auto
-				+soc
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -39,9 +32,18 @@ mixin top-nav()
 				.col.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
-							//- +mob-menu
-							+menu-toggle()
-							+mnu()
+							.container
+								+mnu()
+								+e.bottom.d-lg-none
+									.row
+										.col-auto
+											+e.tel
+												+e.tel-link(href="tel:+78008245247") 8 800 824 52 47
+												+e.tel-caption Звонок на номер бесплатный
+										.col
+											+soc
+									+e.mail(href="#") Sample@sample.com
+									+e.btn Бесплатная консультация
 				.col-auto.d-none.d-lg-block
 					+e.callback-btn(href="#")
 						+icon('phone')

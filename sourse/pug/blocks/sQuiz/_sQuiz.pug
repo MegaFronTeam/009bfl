@@ -2,21 +2,21 @@ mixin sQuiz(data)
 	// start sQuiz
 	+b.SECTION.sQuiz.section#sQuiz&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title
 				h2 Анкета
-			+e.tabs.tabs
-				+e.tabs-caption.tabs__caption
-					.tabs__btn.active
+			+e.tabs
+				+e.tabs-caption
+					+e.tabs-btn(href="#1")
 						h5 1
-					.tabs__btn
+					+e.tabs-btn(href="#2")
 						h5 2
-					.tabs__btn
+					+e.tabs-btn(href="#3")
 						h5 3
-					.tabs__btn
+					+e.tabs-btn(href="#4")
 						h5 4
-					.tabs__btn
+					+e.tabs-btn(href="#5")
 						h5 5
-				+e.tabs-content.tabs__content.active
+				+e.tabs-content(id="1")
 					+b.form
 						+e.descr Ответьте на 4 вопроса, укажите ваш номер телефона, и мы сообщим о возможности списания ваших долгов
 						+e.question Шаг 1. Выберите сумму вашего долга
@@ -28,7 +28,7 @@ mixin sQuiz(data)
 						+e.buttons
 							+e.btn--prev Назад
 							+e.btn--next Вперед
-				+e.tabs-content.tabs__content
+				+e.tabs-content(id="2")
 					+b.form
 						+e.descr Ответьте на 4 вопроса, укажите ваш номер телефона, и мы сообщим о возможности списания ваших долгов
 						+e.question Шаг 2. Выберите какие задолженности вы имеете
@@ -42,7 +42,7 @@ mixin sQuiz(data)
 						+e.buttons
 							+e.btn--prev Назад
 							+e.btn--next Вперед
-				+e.tabs-content.tabs__content
+				+e.tabs-content(id="3")
 					+b.form
 						+e.descr Ответьте на 4 вопроса, укажите ваш номер телефона, и мы сообщим о возможности списания ваших долгов
 						+e.question Шаг 3. Открыто ли в отношении вас исполнительное производство?
@@ -52,7 +52,7 @@ mixin sQuiz(data)
 						+e.buttons
 							+e.btn--prev Назад
 							+e.btn--next Вперед
-				+e.tabs-content.tabs__content
+				+e.tabs-content(id="4")
 					+b.form
 						+e.descr Ответьте на 4 вопроса, укажите ваш номер телефона, и мы сообщим о возможности списания ваших долгов
 						+e.question Шаг 4. Совершали ли вы сделки по продаже недвижимости или автомобиля за последние 3 года?
@@ -62,7 +62,7 @@ mixin sQuiz(data)
 						+e.buttons
 							+e.btn--prev Назад
 							+e.btn--next Вперед
-				+e.tabs-content.tabs__content
+				+e.tabs-content(id="5")
 					+b.form--last
 						+e.last-title Спасибо, остался последний шаг!
 						+e.last-descr Укажите ваш номер телефона, чтобы мы могли с вами связаться и сообщить о возможности списания ваших долгов

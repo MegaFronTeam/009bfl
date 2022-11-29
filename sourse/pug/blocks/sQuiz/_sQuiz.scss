@@ -1,0 +1,100 @@
+// start .sQuiz
+.sQuiz {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	&__tabs {
+		max-width: 560px;
+	}
+	&__tabs-caption {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 15px;
+	}
+	&__tabs-content {
+		height: 520px;
+		@include media-breakpoint-down(sm) {
+			height: auto;
+		}
+	}
+	.form {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	.form--last {
+		.form__last-title {
+			margin:  0 auto 10px;
+			max-width: 400px;
+			text-align: center;
+			font-weight: 700;
+			font-size: rem(30);
+			line-height: 120%;
+			color: $primary;
+			@include media-breakpoint-down(md) {
+				font-size: rem(20);
+			}
+		}
+		.form__last-descr {
+			margin:  0 auto 22px;
+			max-width: 440px;
+			text-align: center;
+			font-weight: 700;
+			font-size: 24px;
+			color: $gray-600;
+			@include media-breakpoint-down(md) {
+				font-size: rem(18);
+			}
+		}
+		.form-control {
+			margin-bottom: 22px;
+			border: 1px solid #D7D7D7;
+			border-radius: 20px;
+			background-color: transparent;
+		}
+		.form__btn {
+			margin-bottom: 20px;
+			@extend .btn, .btn-primary;
+			width: 100%;
+		}
+	}
+	.form__btn--next {
+		@extend .btn, .btn-primary;
+		width: 100%;
+	}
+	.form__btn--prev {
+		@extend .btn, .btn-outline-primary;
+		width: 100%;
+	}
+	.form__small {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 150%;
+		text-align: center;
+	}
+	.form__answers {
+		margin-bottom: 0;
+		flex-grow: 1;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sQuiz

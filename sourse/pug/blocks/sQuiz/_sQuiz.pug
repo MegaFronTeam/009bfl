@@ -1,0 +1,74 @@
+mixin sQuiz(data)
+	// start sQuiz
+	+b.SECTION.sQuiz.section#sQuiz&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Анкета
+			+e.tabs.tabs
+				+e.tabs-caption.tabs__caption
+					.tabs__btn.active
+						h5 1
+					.tabs__btn
+						h5 2
+					.tabs__btn
+						h5 3
+					.tabs__btn
+						h5 4
+					.tabs__btn
+						h5 5
+				+e.tabs-content.tabs__content.active
+					+b.form
+						+e.descr Ответьте на 4 вопроса, укажите ваш номер телефона, и мы сообщим о возможности списания ваших долгов
+						+e.question Шаг 1. Выберите сумму вашего долга
+						+e.answers
+							+in-c('radio','До 300 000 ₽','debt')(checked)
+							+in-c('radio','От 300 000 ₽ до 1 000 000 ₽','debt')
+							+in-c('radio','Свыше 1 000 000 ₽','debt')
+							+in-c('radio','Не помню','debt')
+						+e.buttons
+							+e.btn--prev Назад
+							+e.btn--next Вперед
+				+e.tabs-content.tabs__content
+					+b.form
+						+e.descr Ответьте на 4 вопроса, укажите ваш номер телефона, и мы сообщим о возможности списания ваших долгов
+						+e.question Шаг 2. Выберите какие задолженности вы имеете
+						+e.answers
+							+in-c('radio','займы в МФО или у частных лиц','debt')(checked)
+							+in-c('radio','кредитные карты или потреб. кредиты','debt')
+							+in-c('radio','кредит под залог автомобиля','debt')
+							+in-c('radio','кредит под залог автомобиля','debt')
+							+in-c('radio','долг ЖКХ','debt')
+							+in-c('radio','налоги и штрафы','debt')
+						+e.buttons
+							+e.btn--prev Назад
+							+e.btn--next Вперед
+				+e.tabs-content.tabs__content
+					+b.form
+						+e.descr Ответьте на 4 вопроса, укажите ваш номер телефона, и мы сообщим о возможности списания ваших долгов
+						+e.question Шаг 3. Открыто ли в отношении вас исполнительное производство?
+						+e.answers
+							+in-c('radio','нет','debt')(checked)
+							+in-c('radio','да','debt')
+						+e.buttons
+							+e.btn--prev Назад
+							+e.btn--next Вперед
+				+e.tabs-content.tabs__content
+					+b.form
+						+e.descr Ответьте на 4 вопроса, укажите ваш номер телефона, и мы сообщим о возможности списания ваших долгов
+						+e.question Шаг 4. Совершали ли вы сделки по продаже недвижимости или автомобиля за последние 3 года?
+						+e.answers
+							+in-c('radio','нет','debt')(checked)
+							+in-c('radio','да','debt')
+						+e.buttons
+							+e.btn--prev Назад
+							+e.btn--next Вперед
+				+e.tabs-content.tabs__content
+					+b.form--last
+						+e.last-title Спасибо, остался последний шаг!
+						+e.last-descr Укажите ваш номер телефона, чтобы мы могли с вами связаться и сообщить о возможности списания ваших долгов
+						.form-floating
+							input.form-control(type='tel' placeholder="+7 ___ ___ __ __" id="tel" required)
+							label(for='tel') Ваш номер телефона*
+						+e.BUTTON.btn(type="submit") Отправить
+						+e.small *Отправка номера телефона подтверждает ваше согласие c условиями передачи информации
+	// end sQuiz

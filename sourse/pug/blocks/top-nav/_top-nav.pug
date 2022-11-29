@@ -2,7 +2,7 @@ mixin menu-toggle()
 	+b.toggle-menu-mobile--js.d-lg-none
 		span
 mixin mob-mnu()
-	-
+	//- -
 		//- let path = require('path');
 		//- let fs = require('fs');
 		//- var requestURL = 'top-nav.json';
@@ -12,10 +12,24 @@ mixin mob-mnu()
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js
-		+b.toggle-menu-mobile--js
-			span
+		+e.top
+			+b.toggle-menu-mobile--js
+				span
+			+e.logo-col
+				+e.logo-wrap(href="#")
+					+img("img/svg/logo.svg")
+			+e.callback-wrap.d-lg-none
+				+e.callback(href="#")
+					+icon('phone')
 		+e.inner
 			+mnu()
+		+e.bottom
+			.col-auto.col-sm-6.col-lg-auto
+				+e.tel
+					+e.tel-link(href="tel:+78008245247") 8 800 824 52 47
+					+e.tel-caption Звонок на номер бесплатный
+			.col-auto.col-sm-6.col-soc.col-lg-auto
+				+soc
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -25,12 +39,13 @@ mixin top-nav()
 				.col.order-lg-0.order-last
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
+							//- +mob-menu
 							+menu-toggle()
 							+mnu()
-				.col-auto
+				.col-auto.d-none.d-lg-block
 					+e.callback-btn(href="#")
 						+icon('phone')
 						| Заказать звонок
-				.col-auto.d-lg-none
-					+menu-toggle()
+				//- .col-auto.d-lg-none
+				//- 	+menu-toggle()
 	// end top-nav

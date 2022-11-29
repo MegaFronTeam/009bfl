@@ -1,0 +1,51 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sForYou/_sForYou.pug
+include ../blocks/sResponsibility/_sResponsibility.pug
+include ../blocks/sDebts/_sDebts.pug
+include ../blocks/sPrice/_sPrice.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sAloneSteps/_sAloneSteps.pug
+include ../blocks/sArbitration/_sArbitration.pug
+include ../blocks/sFirstVisit/_sFirstVisit.pug
+include ../blocks/sWriteDowns/_sWriteDowns.pug
+include ../blocks/sSpecialists/_sSpecialists.pug
+include ../blocks/sCooperation/_sCooperation.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sFaq/_sFaq.pug
+include ../blocks/sQuiz/_sQuiz.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Обнуление долгов'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+sQuiz()
+		
+	+footer().policy
+      
+
+
+

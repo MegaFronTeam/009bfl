@@ -5,6 +5,11 @@
 --sPT: #{rem(177)};
 	--sPB: #{rem(50)};
 	// --sTPB: #{rem()};
+	&.policy {
+		--sPT: #{rem(72)};
+		border-top-left-radius: 70px;
+		border-top-right-radius: 70px;
+	}
 	@include media-breakpoint-down(md) {
 		--sPT: #{rem(35)};
 			--sPB: #{rem(20)};
@@ -70,7 +75,7 @@
 			justify-content: flex-start;
 		}
 		li:not(:last-child) {
-			margin-right: 24px;
+			margin-right: 20px;
 		}
 		img {
 			width: 24px;
@@ -95,6 +100,7 @@
 		}
 	}
 	&__callback {
+		display: block;
 		margin-bottom: 60px;
 		font-weight: 700;
 		color: $primary;

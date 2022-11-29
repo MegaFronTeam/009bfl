@@ -1,0 +1,87 @@
+// start .sPolicy
+.sPolicy {
+	--sPT: #{rem(20)};
+	--sPB: #{rem(20)};
+	--sTPB: #{rem(54)};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		display: flex;
+		align-items: center;
+		.icon {
+			margin-right: 32px;
+			stroke: $primary;
+			font-size: 20px;
+		}
+		h2 {
+			margin-bottom: 0;
+		}
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	ol {
+		padding-left: 0;
+		list-style: none;
+		counter-reset: li;
+		font-weight: 700;
+		font-size: 24px;
+		@include media-breakpoint-down(lg) {
+			font-size: 18px;
+		}
+		li:first-child {
+			.sPolicy__title {
+				font-size: 36px;
+				@include media-breakpoint-down(lg) {
+					font-size: 24px;
+				}
+			}
+		}
+		ol {
+			margin-bottom: 30px;
+			color: $gray-600;
+			li::before {
+				font-size: rem(24);
+				@include media-breakpoint-down(lg) {
+					font-size: rem(18);
+				}
+			}
+		}
+	}
+	p {
+		margin-bottom: 0;
+		color: $gray-600;
+	}
+	li:before {
+		counter-increment: li;
+		content: counters(li, ".") ". ";
+		font-size: rem(36);
+		@include media-breakpoint-down(lg) {
+			font-size: rem(26);
+		}
+ }
+ &__title {
+	display: inline-block;
+	margin-bottom: 30px;
+	font-weight: 700;
+	font-size: rem(30);
+	line-height: 120%;
+	@include media-breakpoint-down(lg) {
+		font-size: rem(24);
+	}
+ }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPolicy

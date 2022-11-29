@@ -1,5 +1,5 @@
 mixin footer()
-	+b.FOOTER.footer.section
+	+b.FOOTER.footer.section&attributes(attributes)
 		.container
 			+e.top-row.row
 				+e.left-col.col-md-6 
@@ -16,13 +16,16 @@ mixin footer()
 						| Работаем ежедневно с 10 до 19.
 				+e.right-col.col-md-6 
 					+e.phone-list.UL
-						+e.tel.LI(href="tel:+78008245247") 8 800 824 52 47
-						+e.wa.LI(href="#")
-							+img('img/whatsapp.png')
+						+e.tel.LI
+							a(href="tel:+78008245247") 8 800 824 52 47
+						+e.wa.LI
+							a(href="#")
+								+img('img/whatsapp.png')
 						+e.telegram.LI(href="#")
-							+img('img/telegram.png')
+							a(href="#")
+								+img('img/telegram.png')
 					+e.mail(href="mailto:info@obnulenie-dolgov.ru") info@obnulenie-dolgov.ru
-					+e.callback
+					+e.callback(href="#")
 						+icon('phone')
 						| Заказать звонок
 			+e.bottom-row.row

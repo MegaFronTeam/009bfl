@@ -20,9 +20,12 @@ block pagecontent
 			.row
 				mixin btn(id, name)
 					.col-auto.mb-2
-						a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
-				+btn("modal-free", "Бесплатная консультация")
-				+btn("modal-subscribe", "Запишитесь на консультацию")
-				+btn("modal-help", "Обратитесь за помощью")
-				+btn("modal-consult", "Получите консультацию")
+						a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")&attributes(attributes)= name
+				+btn("modal-free", "Бесплатная консультация")(data.title = 'Бесплатная консультация')
+				+btn("modal-free", "Запишитесь на консультацию")(data.title = 'Запишитесь на консультацию')
+				+btn("modal-free", "Обратитесь за помощью")(data.title = 'Обратитесь за помощью')
+				+btn("modal-free", "Получите консультацию")(data.title = 'Получите консультацию')
+				//- +btn("modal-subscribe", "Запишитесь на консультацию")
+				//- +btn("modal-help", "Обратитесь за помощью")
+				//- +btn("modal-consult", "Получите консультацию")
 

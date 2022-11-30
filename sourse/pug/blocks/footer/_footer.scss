@@ -5,6 +5,9 @@
 --sPT: #{rem(177)};
 	--sPB: #{rem(50)};
 	// --sTPB: #{rem()};
+	a:hover {
+		color: $white;
+	}
 	&.policy {
 		--sPT: #{rem(72)};
 		border-top-left-radius: 70px;

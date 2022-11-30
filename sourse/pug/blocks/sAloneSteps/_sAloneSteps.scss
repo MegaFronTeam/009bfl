@@ -27,11 +27,14 @@
 			display: none;
 		}
 	}
+	.container {
+		position: relative;
+	}
 	.sAloneSteps-bg {
 		position: absolute;
 		width: 164.49px;
 		height: 156.47px;
-		left: -40px;
+		left: -16%;
 		top: 50px;
 		z-index: -1;
 		transform: rotate(45.34deg);
@@ -64,6 +67,7 @@
 		position: relative;
 		@include media-breakpoint-down(lg) {
 			height: auto;
+			width: 80%;
 		}
 		&:nth-child(even) {
 			left: 200px;

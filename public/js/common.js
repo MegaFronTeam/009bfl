@@ -47,7 +47,7 @@ const JSCCommon = {
 					// console.log(modal.querySelector(elem).tagName)
 				}
 			}
-			setValue(data.title, '.ttu');
+			setValue(data.title, '.form-wrap__title');
 			setValue(data.text, '.after-headline');
 			setValue(data.btn, '.btn');
 			setValue(data.order, '.order');
@@ -246,33 +246,39 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	makeDDGroup() {
-		let parents = document.querySelectorAll('.dd-group-js');
-		for (let parent of parents) {
-			if (parent) {
-				// childHeads, kind of funny))
-				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
-				$(ChildHeads).click(function () {
-					let clickedHead = this;
+		$('.dd-head-js').click(function () {
+			$(this.parentElement).toggleClass('active');
+			$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+				$(this).toggleClass('active');
+			});
+		});
+		// let parents = document.querySelectorAll('.dd-group-js');
+		// for (let parent of parents) {
+		// 	if (parent) {
+		// 		// childHeads, kind of funny))
+		// 		let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
+		// 		$(ChildHeads).click(function () {
+		// 			let clickedHead = this;
 
-					$(ChildHeads).each(function () {
-						if (this === clickedHead) {
-							//parent element gain toggle class, style head change via parent
-							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.dd-content-js').slideToggle(function () {
-								$(this).toggleClass('active');
-							});
-						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
-					});
+		// 			$(ChildHeads).each(function () {
+		// 				if (this === clickedHead) {
+		// 					//parent element gain toggle class, style head change via parent
+		// 					$(this.parentElement).toggleClass('active');
+		// 					$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+		// 						$(this).toggleClass('active');
+		// 					});
+		// 				}
+		// 				else {
+		// 					$(this.parentElement).removeClass('active');
+		// 					$(this.parentElement).find('.dd-content-js').slideUp(function () {
+		// 						$(this).removeClass('active');
+		// 					});
+		// 				}
+		// 			});
 
-				});
-			}
-		}
+		// 		});
+		// 	}
+		// }
 	},
 	imgToSVG() {
     const convertImages = (query, callback) => {
@@ -371,35 +377,35 @@ function eventHandler() {
 		watchOverflow: true
 	});
 	
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-	});
+	// const swiper4 = new Swiper('.sBanners__slider--js', {
+	// 	// slidesPerView: 5,
+	// 	...defaultSl,
+	// 	slidesPerView: 'auto',
+	// 	freeMode: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
+	// });
 
 	const visitSlider = new Swiper('.sFirstVisit__slider--js', {
 		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
+		// ...defaultSl,
+		// slidesPerView: 'auto',
 		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+		// loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,		
 		navigation: false,
 		breakpoints: {
 			320: {
 				spaceBetween: 16,
-				slidesPerView:1.1,
+				slidesPerView:1,
 			},
 			576: {
 				spaceBetween: 16,
-				slidesPerView: 2.1,
+				slidesPerView: 2,
 			},
 			992: {
 				spaceBetween: 40,
@@ -411,7 +417,7 @@ function eventHandler() {
 		// ...defaultSl,
 		freeMode: true,
 		// loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+		// touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 		navigation: {
@@ -426,11 +432,11 @@ function eventHandler() {
 		breakpoints: {
 			320: {
 				spaceBetween: 16,
-				slidesPerView:1.1,
+				slidesPerView:1,
 			},
 			576: {
 				spaceBetween: 16,
-				slidesPerView: 2.1,
+				slidesPerView: 2,
 			},
 			992: {
 				spaceBetween: 40,
@@ -442,9 +448,9 @@ function eventHandler() {
 		// ...defaultSl,
 		freeMode: true,
 		// loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+		// touchRatio: 0.2,
 		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		// freeModeMomentum: true,
 		navigation: {
 			nextEl: '.sSpecialists .swiper-button-next',
 			prevEl: '.sSpecialists .swiper-button-prev',
@@ -457,11 +463,11 @@ function eventHandler() {
 		breakpoints: {
 			320: {
 				spaceBetween: 16,
-				slidesPerView:1.1,
+				slidesPerView:1,
 			},
 			576: {
 				spaceBetween: 16,
-				slidesPerView: 2.1,
+				slidesPerView: 2,
 			},
 			992: {
 				spaceBetween: 40,
@@ -477,9 +483,9 @@ function eventHandler() {
 		// ...defaultSl,
 		freeMode: true,
 		// loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
+		// touchRatio: 0.2,
 		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		// freeModeMomentum: true,
 		navigation: {
 			nextEl: '.sCooperation .swiper-button-next',
 			prevEl: '.sCooperation .swiper-button-prev',
@@ -492,11 +498,11 @@ function eventHandler() {
 		breakpoints: {
 			320: {
 				spaceBetween: 16,
-				slidesPerView:1.4,
+				slidesPerView:1,
 			},
 			576: {
 				spaceBetween: 16,
-				slidesPerView: 2.1,
+				slidesPerView: 2,
 			},
 			992: {
 				spaceBetween: 40,
@@ -510,9 +516,9 @@ function eventHandler() {
 	});
 	const sFeedBackSwiper = new Swiper('.sFeedBack__slider--js', {
 		freeMode: true,
-		touchRatio: 0.2,
+		// touchRatio: 0.2,
 		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		// freeModeMomentum: true,
 		navigation: {
 			nextEl: '.sFeedBack .swiper-button-next',
 			prevEl: '.sFeedBack .swiper-button-prev',
@@ -539,25 +545,29 @@ function eventHandler() {
 	function debtsSLiderInit() {
 		if (window.innerWidth <= 576 && debtsSlider.dataset.mobile === 'false') {
 			debtSwiper = new Swiper(debtsSlider, {
-				slidesPerView: 1.05,
+				slidesPerView: 'auto',
 			});
 			debtsSlider.dataset.mobile = 'true';
-		} else if (debtSwiper) {
+		} else if (window.innerWidth > 576) {
 			debtsSlider.dataset.mobile = 'false';
-			debtSwiper.destroy();
+			if (debtsSlider.classList.contains('swiper-initialized')) {
+				debtSwiper.destroy();
+			}	
 		}
 	}
 	const stepsSlider = document.querySelector('.sAloneSteps-slider--js');
-	let stepSwiper;
+	let stepSwiper = {};
 	function stepsSliderInit() {
 		if (window.innerWidth <= 992 && stepsSlider.dataset.mobile === 'false') {
 			stepSwiper = new Swiper(stepsSlider, {
-				slidesPerView: 1.05,
+				slidesPerView: 1,
 			});
 			stepsSlider.dataset.mobile = 'true';
-		} else if (stepsSlider) {
+		} else if (window.innerWidth > 992) {
 			stepsSlider.dataset.mobile = 'false';
-			stepSwiper.destroy();
+			if (stepsSlider.classList.contains('swiper-initialized')) {
+				stepSwiper.destroy();
+			}			
 		}
 	}
 	debtsSLiderInit();

@@ -90,16 +90,24 @@
 			width: 100%;
 		}
 	}
-	.test-bg {
+	&__bg-wrap {
 		position: absolute;
-		bottom: -15px;
+		bottom: 0;
 		left: 65%;
+		width: 239px;
+		height: 165px;
+		overflow: hidden;
+	}
+	.test-bg {
 		width: 210px;
+		height: 173px;
 		transform: rotate(30deg);
-		clip-path: polygon(0 0, 100% 0,85% 73%,0 132%);
+		transform-origin: bottom;
+		object-fit: cover;
+		// clip-path: polygon(0 0, 100% 0,85% 73%,0 132%);
 		@include media-breakpoint-down(sm) {
 			width: 176px;
-			clip-path: polygon(0% 0%,180% 0,81% 74%,2% 127%);
+			// clip-path: polygon(0% 0%,180% 0,81% 74%,2% 127%);
 		}
 	}
 	&__col{

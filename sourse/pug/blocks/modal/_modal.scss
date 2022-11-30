@@ -1,6 +1,11 @@
 :root {
 	--fancybox-content-bg: none;
 }
+.fancybox__slide {
+	@include media-breakpoint-down(md) {
+		padding-top: 150px;
+	}
+}
 
 .fancybox__content {
 	padding: 0;
@@ -127,7 +132,8 @@ a {
 		right: 16px !important;
 	}
 	svg {
-		color: #282533;
+		color:  #667985;
+		filter: none;
 	}
 	
 }

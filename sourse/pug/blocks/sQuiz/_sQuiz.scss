@@ -26,10 +26,10 @@
 		margin-bottom: 15px;
 	}
 	&__tabs-content {
-		height: 520px;
+		min-height: 520px;
 		margin-bottom: 30px;
 		@include media-breakpoint-down(sm) {
-			height: auto;
+			min-height: none;
 		}
 	}
 	.form {

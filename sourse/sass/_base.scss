@@ -591,4 +591,12 @@ iframe {
 
 .btn-primary {
 	color: $white;
+	&:hover, &:focus{
+		color: $white;
+	}
+}
+.btn-outline-primary {
+	&:hover, &:focus {
+		color: $white;
+	}
 }

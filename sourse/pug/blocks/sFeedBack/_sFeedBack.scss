@@ -49,6 +49,11 @@
 	}
 	&__slide{
 		height: auto;
+		width: 48%;
+		margin-right: 2%;
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
 	}
 	&__item{
 		padding: 32px;

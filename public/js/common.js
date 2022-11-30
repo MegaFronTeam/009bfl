@@ -413,169 +413,192 @@ function eventHandler() {
 			},
 		}
 	});
-	const sWriteDownsSwiper = new Swiper('.sWriteDowns__slider--js', {
-		// ...defaultSl,
-		freeMode: true,
-		// loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-		navigation: {
-			nextEl: '.sWriteDowns .swiper-button-next',
-			prevEl: '.sWriteDowns .swiper-button-prev',
-		},
-		pagination: {
-			el: '.sWriteDowns .swiper-pagination',
-			type: 'bullets',
-			clickable: 'true',
-		},
-		breakpoints: {
-			320: {
-				spaceBetween: 16,
-				slidesPerView:1,
-			},
-			576: {
-				spaceBetween: 16,
-				slidesPerView: 2,
-			},
-			992: {
-				spaceBetween: 40,
-				slidesPerView:3,
-			},
+	const navSliderContainers = document.querySelectorAll('.nav-slider-container--js');
+	if (navSliderContainers) {
+		for (let navContainer of navSliderContainers) {
+			const navSwiper = new Swiper(navContainer.querySelector('.swiper'), {
+				slidesPerView: 'auto',
+				navigation: {
+					nextEl: navContainer.querySelector('.swiper-button-next'),
+					prevEl: navContainer.querySelector('.swiper-button-prev'),
+				},
+				pagination: {
+					el: navContainer.querySelector('.swiper-pagination'),
+					type: 'bullets',
+					clickable: 'true',
+				},
+			})
 		}
-	});
-	const sSpecialistsSwiper = new Swiper('.sSpecialists__slider--js', {
-		// ...defaultSl,
-		freeMode: true,
-		// loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		navigation: {
-			nextEl: '.sSpecialists .swiper-button-next',
-			prevEl: '.sSpecialists .swiper-button-prev',
-		},
-		pagination: {
-			el: '.sSpecialists .swiper-pagination',
-			type: 'bullets',
-			clickable: 'true',
-		},
-		breakpoints: {
-			320: {
-				spaceBetween: 16,
-				slidesPerView:1,
-			},
-			576: {
-				spaceBetween: 16,
-				slidesPerView: 2,
-			},
-			992: {
-				spaceBetween: 40,
-				slidesPerView:3,
-			},
-			1200: {
-				spaceBetween: 40,
-				slidesPerView:4,
-			},
-		}
-	});
-	const sCooperationSwiper = new Swiper('.sCooperation__slider--js', {
-		// ...defaultSl,
-		freeMode: true,
-		// loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		navigation: {
-			nextEl: '.sCooperation .swiper-button-next',
-			prevEl: '.sCooperation .swiper-button-prev',
-		},
-		pagination: {
-			el: '.sCooperation .swiper-pagination',
-			type: 'bullets',
-			clickable: 'true',
-		},
-		breakpoints: {
-			320: {
-				spaceBetween: 16,
-				slidesPerView:1,
-			},
-			576: {
-				spaceBetween: 16,
-				slidesPerView: 2,
-			},
-			992: {
-				spaceBetween: 40,
-				slidesPerView:3,
-			},
-			1200: {
-				spaceBetween: 40,
-				slidesPerView:4,
-			},
-		}
-	});
-	const sFeedBackSwiper = new Swiper('.sFeedBack__slider--js', {
-		freeMode: true,
-		// touchRatio: 0.2,
-		slideToClickedSlide: true,
-		// freeModeMomentum: true,
-		navigation: {
-			nextEl: '.sFeedBack .swiper-button-next',
-			prevEl: '.sFeedBack .swiper-button-prev',
-		},
-		pagination: {
-			el: '.sFeedBack .swiper-pagination',
-			type: 'bullets',
-			clickable: 'true',
-		},
-		breakpoints: {
-			320: {
-				spaceBetween: 16,
-				slidesPerView:1,
-			},
-			992: {
-				spaceBetween: 40,
-				slidesPerView: 2,
-			},
-		}
-	});
+	}
+	// const sWriteDownsSwiper = new Swiper('.sWriteDowns__slider--js', {
+	// 	// ...defaultSl,
+	// 	freeMode: true,
+	// 	// loopFillGroupWithBlank: true,
+	// 	// touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
+	// 	navigation: {
+	// 		nextEl: '.sWriteDowns .swiper-button-next',
+	// 		prevEl: '.sWriteDowns .swiper-button-prev',
+	// 	},
+	// 	pagination: {
+	// 		el: '.sWriteDowns .swiper-pagination',
+	// 		type: 'bullets',
+	// 		clickable: 'true',
+	// 	},
+	// 	breakpoints: {
+	// 		320: {
+	// 			spaceBetween: 16,
+	// 			slidesPerView:1,
+	// 		},
+	// 		576: {
+	// 			spaceBetween: 16,
+	// 			slidesPerView: 2,
+	// 		},
+	// 		992: {
+	// 			spaceBetween: 40,
+	// 			slidesPerView:3,
+	// 		},
+	// 	}
+	// });
+	// const sSpecialistsSwiper = new Swiper('.sSpecialists__slider--js', {
+	// 	// ...defaultSl,
+	// 	freeMode: true,
+	// 	// loopFillGroupWithBlank: true,
+	// 	// touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	// freeModeMomentum: true,
+	// 	navigation: {
+	// 		nextEl: '.sSpecialists .swiper-button-next',
+	// 		prevEl: '.sSpecialists .swiper-button-prev',
+	// 	},
+	// 	pagination: {
+	// 		el: '.sSpecialists .swiper-pagination',
+	// 		type: 'bullets',
+	// 		clickable: 'true',
+	// 	},
+	// 	breakpoints: {
+	// 		320: {
+	// 			spaceBetween: 16,
+	// 			slidesPerView:1,
+	// 		},
+	// 		576: {
+	// 			spaceBetween: 16,
+	// 			slidesPerView: 2,
+	// 		},
+	// 		992: {
+	// 			spaceBetween: 40,
+	// 			slidesPerView:3,
+	// 		},
+	// 		1200: {
+	// 			spaceBetween: 40,
+	// 			slidesPerView:4,
+	// 		},
+	// 	}
+	// });
+	// const sCooperationSwiper = new Swiper('.sCooperation__slider--js', {
+	// 	// ...defaultSl,
+	// 	freeMode: true,
+	// 	// loopFillGroupWithBlank: true,
+	// 	// touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	// freeModeMomentum: true,
+	// 	navigation: {
+	// 		nextEl: '.sCooperation .swiper-button-next',
+	// 		prevEl: '.sCooperation .swiper-button-prev',
+	// 	},
+	// 	pagination: {
+	// 		el: '.sCooperation .swiper-pagination',
+	// 		type: 'bullets',
+	// 		clickable: 'true',
+	// 	},
+	// 	breakpoints: {
+	// 		320: {
+	// 			spaceBetween: 16,
+	// 			slidesPerView:1,
+	// 		},
+	// 		576: {
+	// 			spaceBetween: 16,
+	// 			slidesPerView: 2,
+	// 		},
+	// 		992: {
+	// 			spaceBetween: 40,
+	// 			slidesPerView:3,
+	// 		},
+	// 		1200: {
+	// 			spaceBetween: 40,
+	// 			slidesPerView:4,
+	// 		},
+	// 	}
+	// });
+	// const sFeedBackSwiper = new Swiper('.sFeedBack__slider--js', {
+	// 	freeMode: true,
+	// 	// touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	// freeModeMomentum: true,
+	// 	navigation: {
+	// 		nextEl: '.sFeedBack .swiper-button-next',
+	// 		prevEl: '.sFeedBack .swiper-button-prev',
+	// 	},
+	// 	pagination: {
+	// 		el: '.sFeedBack .swiper-pagination',
+	// 		type: 'bullets',
+	// 		clickable: 'true',
+	// 	},
+	// 	breakpoints: {
+	// 		320: {
+	// 			spaceBetween: 16,
+	// 			slidesPerView:1,
+	// 		},
+	// 		992: {
+	// 			spaceBetween: 40,
+	// 			slidesPerView: 2,
+	// 		},
+	// 	}
+	// });
 	
 	const debtsSlider = document.querySelector('.debts-slider--js');
-	let debtSwiper;
-	function debtsSLiderInit() {
-		if (window.innerWidth <= 576 && debtsSlider.dataset.mobile === 'false') {
-			debtSwiper = new Swiper(debtsSlider, {
-				slidesPerView: 'auto',
-			});
-			debtsSlider.dataset.mobile = 'true';
-		} else if (window.innerWidth > 576) {
-			debtsSlider.dataset.mobile = 'false';
-			if (debtsSlider.classList.contains('swiper-initialized')) {
-				debtSwiper.destroy();
-			}	
+	if (debtsSlider) {
+		let debtSwiper;
+		function debtsSLiderInit() {
+			if (window.innerWidth <= 576 && debtsSlider.dataset.mobile === 'false') {
+				debtSwiper = new Swiper(debtsSlider, {
+					slidesPerView: 'auto',
+				});
+				debtsSlider.dataset.mobile = 'true';
+			} else if (window.innerWidth > 576) {
+				debtsSlider.dataset.mobile = 'false';
+				if (debtsSlider.classList.contains('swiper-initialized')) {
+					debtSwiper.destroy();
+				}	
+			}
 		}
+		debtsSLiderInit();
+		window.addEventListener('resize', () => {
+			debtsSLiderInit();
+		});
 	}
 	const stepsSlider = document.querySelector('.sAloneSteps-slider--js');
-	let stepSwiper = {};
-	function stepsSliderInit() {
-		if (window.innerWidth <= 992 && stepsSlider.dataset.mobile === 'false') {
-			stepSwiper = new Swiper(stepsSlider, {
-				slidesPerView: 1,
-			});
-			stepsSlider.dataset.mobile = 'true';
-		} else if (window.innerWidth > 992) {
-			stepsSlider.dataset.mobile = 'false';
-			if (stepsSlider.classList.contains('swiper-initialized')) {
-				stepSwiper.destroy();
-			}			
+	if (stepsSlider) {
+		let stepSwiper = {};
+		function stepsSliderInit() {
+			if (window.innerWidth <= 992 && stepsSlider.dataset.mobile === 'false') {
+				stepSwiper = new Swiper(stepsSlider, {
+					slidesPerView: 1,
+				});
+				stepsSlider.dataset.mobile = 'true';
+			} else if (window.innerWidth > 992) {
+				stepsSlider.dataset.mobile = 'false';
+				if (stepsSlider.classList.contains('swiper-initialized')) {
+					stepSwiper.destroy();
+				}			
+			}
 		}
-	}
-	debtsSLiderInit();
-	stepsSliderInit();
-	window.addEventListener('resize', () => {
-		debtsSLiderInit();
 		stepsSliderInit();
-	});
+		window.addEventListener('resize', () => {
+			stepsSliderInit();
+		});
+	}
 	// modal window
 
 };

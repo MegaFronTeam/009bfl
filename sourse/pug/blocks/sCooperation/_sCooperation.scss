@@ -34,6 +34,28 @@
 	}
 	&__slide {
 		height: auto;
+		width: 24%;
+		&:not(:last-child) {
+			margin-right: 2%;
+		}
+		@include media-breakpoint-down(lg) {
+			width: 32%;
+			&:not(:last-child) {
+				margin-right: 2%;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			width: 49%;
+			&:not(:last-child) {
+				margin-right: 16px;
+			}
+		}
+		@media (max-width:350px) {
+			width: 70%;
+			&:not(:last-child) {
+				margin-right: 16px;
+			}
+		}
 	}
 	&__item{
 		display: flex;

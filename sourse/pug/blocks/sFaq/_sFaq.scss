@@ -25,6 +25,9 @@
 			display: none;
 		}
 	}
+	.container {
+		position: relative;
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
@@ -121,7 +124,7 @@
 		position: absolute;
 		width: 164.49px;
 		height: 156.47px;
-		left: 100px;
+		left: -45px;
 		bottom: 100px;
 		transform: rotate(45.34deg);
 		z-index: -1;
@@ -134,7 +137,7 @@
 		width: 244px;
 		height: 232px;
 		top: 50%;
-		right: 160px;
+		right: -15%;
 		transform: rotate(25.68deg);
 		z-index: -1;
 		@include media-breakpoint-down(lg) {

@@ -17,6 +17,9 @@
 		filter: blur(91.5px);
 		z-index: -3;
 	}
+	.container {
+		position: relative;
+	}
 	.top-rub {
 		position: absolute;
 		top: -22px;
@@ -55,10 +58,13 @@
 	}
 	.bottom-scales {
 		position: absolute;
-		bottom: 116px;
-		right: 37%;
+		bottom: 0;
+		right: 30%;
 		width: 303px;
 		z-index: -2;
+		@include media-breakpoint-down(xxl) {
+			right: 23%;
+		}
 	}
 	h1 {
 		@extend .visually-hidden;
@@ -73,7 +79,7 @@
 			font-weight: 800;
 		}
 	}
-	p {
+	&__descr {
 		margin-bottom: 30px;
 		font-size: 24px;
 		line-height: 140%;
@@ -91,6 +97,8 @@
 		font-size: rem(18);
 		color: $gray-600;
 		@include media-breakpoint-down(md) {
+			margin-bottom: 30px;
+			order: 2;
 			font-size: 16px;
 		}
 		li {
@@ -108,6 +116,13 @@
 		}
 		@include media-breakpoint-down(md) {
 			max-width: none;
+			order: 1;
+		}
+	}
+	&__text-col {
+		@include media-breakpoint-down(md) {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 	.section-title{
@@ -189,6 +204,7 @@
 			width: 24px;
 			height: 24px;
 			margin-right: 12px;
+			margin-top: 0;
 		}
 	}
 	&__question {

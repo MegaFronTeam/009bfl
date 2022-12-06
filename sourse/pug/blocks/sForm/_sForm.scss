@@ -12,7 +12,7 @@
 		@include media-breakpoint-down(md) {
 			--sPT: #{rem(24)};
 			--sPB: #{rem(24)};
-			--sTPB: 50px;
+			--sTPB: #{rem(24)};
 			border-radius: $border-radius;
 		}
 		.container {
@@ -91,7 +91,10 @@
 			right: -250px;
 			bottom: -140px;
 			@include media-breakpoint-down(md) {
-				display: none;
+				width: 400px;
+				height: 279px;
+				right: -230px;
+				bottom: -70px;
 			}
 		}
 		&--small {

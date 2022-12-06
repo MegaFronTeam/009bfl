@@ -36,6 +36,13 @@
 	.section-title{
 		
 	}
+	h2 {
+		span {
+			@include media-breakpoint-down(sm) {
+				color: $primary;
+			}
+		}
+	}
 	.dd-group {
 		max-width: 1020px;
 		margin: 0 auto;

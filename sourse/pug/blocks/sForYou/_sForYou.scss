@@ -97,8 +97,14 @@
 		width: 239px;
 		height: 165px;
 		overflow: hidden;
+		@include media-breakpoint-down(sm) {
+			// width: 154px;
+			// height: 125px;
+			left: 48%;
+		}
 	}
 	.test-bg {
+		position: relative;
 		width: 210px;
 		height: 173px;
 		transform: rotate(30deg);
@@ -106,7 +112,11 @@
 		object-fit: cover;
 		// clip-path: polygon(0 0, 100% 0,85% 73%,0 132%);
 		@include media-breakpoint-down(sm) {
+			max-height: 100%;
+			max-width: 100%;
 			width: 176px;
+			height: 145.68px;
+			bottom: -20px;
 			// clip-path: polygon(0% 0%,180% 0,81% 74%,2% 127%);
 		}
 	}

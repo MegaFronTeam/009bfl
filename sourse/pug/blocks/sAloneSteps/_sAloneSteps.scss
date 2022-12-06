@@ -30,6 +30,13 @@
 	.container {
 		position: relative;
 	}
+	h2 {
+		span {
+			@include media-breakpoint-down(sm) {
+				color: $primary;
+			}
+		}
+	}
 	.sAloneSteps-bg {
 		position: absolute;
 		width: 164.49px;
@@ -58,7 +65,7 @@
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: #{rem(54)};
+		--bs-gutter-y: #{rem(30)};
 		@include media-breakpoint-down(lg) {
 			flex-wrap: nowrap;
 		}
@@ -82,10 +89,24 @@
 				left: 42px;
 				display: inline-block;
 				content: '';
+				width: 1px;
+				height: 150px;
+				background-image: url("../img/svg/dashed-hor.svg");
+				background-repeat: repeat-y;
+				@include media-breakpoint-down(xl) {
+					content: none;
+				}
+			}
+			&::after {
+				position: absolute;
+				bottom: -100px;
+				left: 42px;
+				display: inline-block;
+				content: '';
 				width: 150px;
-				height: 153px;
-				border-left: 1px dashed $primary;
-				border-bottom: 1px dashed $primary;
+				height: 1px;
+				background-image: url("../img/svg/dashed-vert.svg");
+				background-repeat: repeat-x;
 				@include media-breakpoint-down(xl) {
 					content: none;
 				}
@@ -298,7 +319,7 @@
 		}
 	}
 	&__singly-title {
-		max-width: 440px;
+		max-width: 558px;
 		margin-bottom: 16px;
 		font-weight: 700;
 		font-size: rem(30);

@@ -47,10 +47,11 @@
 		@include media-breakpoint-down(sm) {
 			padding: 24px;
 			border-radius: $border-radius;
-			background-image: url('../img/arbitration-dt.jpg');
+			background-image: url('../img/arbitration.jpg');
 			background-position: 100% 0;
 			background-size: auto 100%;
 			background-repeat: no-repeat;
+			background: linear-gradient(84.49deg, #FFFFFF 4.13%, rgba(255, 255, 255, 0.599615) 57.59%, rgba(255, 255, 255, 0) 137.64%), url('../img/arbitration.jpg'), #FFFFFF;
 			&::after {
 				position: absolute;
 				top: 0;

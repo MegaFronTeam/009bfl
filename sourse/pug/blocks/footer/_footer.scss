@@ -14,8 +14,8 @@
 		border-top-right-radius: 70px;
 	}
 	@include media-breakpoint-down(md) {
-		--sPT: #{rem(35)};
-			--sPB: #{rem(20)};
+		--sPT: #{rem(100)};
+		--sPB: #{rem(20)};
 	}
 	&__row{
 		// --bs-gutter-x: #{rem()};

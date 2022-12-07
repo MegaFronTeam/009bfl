@@ -60,6 +60,7 @@
 		padding: 24px 50px;
 		@include media-breakpoint-down(md) {
 			padding: 24px 21px;
+			padding-right: 0;
 		}
 		&:not(:last-child) {
 			border-bottom: 1px solid rgba(#524F5E, .2);
@@ -91,6 +92,9 @@
 			right: 20px;
 			transform: translateY(-50%);
 			@include mt;
+			@include media-breakpoint-down(md) {
+				right: 0px;
+			}
 		}
 		&::before {
 			position: absolute;
@@ -104,6 +108,9 @@
 			transform: translateY(-50%);
 			transform-origin: 4px 4px;
 			@include mt;
+			@include media-breakpoint-down(md) {
+				right: 8px;
+			}
 		}
 	}
 	&__col{

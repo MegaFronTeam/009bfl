@@ -86,7 +86,8 @@
 	&__test-btn {
 		@include main-btn;
 		z-index: 5;
-		@include media-breakpoint-down(sm) {
+		max-width: 430px;
+		@include media-breakpoint-down(lg) {
 			width: 100%;
 		}
 	}
@@ -100,7 +101,8 @@
 		@include media-breakpoint-down(sm) {
 			// width: 154px;
 			// height: 125px;
-			left: 48%;
+			left: auto;
+			right: -60px;
 		}
 	}
 	.test-bg {
@@ -116,7 +118,7 @@
 			max-width: 100%;
 			width: 176px;
 			height: 145.68px;
-			bottom: -20px;
+			bottom: -34px;
 			// clip-path: polygon(0% 0%,180% 0,81% 74%,2% 127%);
 		}
 	}

@@ -49,10 +49,11 @@
 	}
 	&__slide{
 		height: auto;
-		width: 48%;
-		margin-right: 2%;
+		width: calc((100% - 40px) / 2);
+		margin-right: 40px;
 		@include media-breakpoint-down(lg) {
 			width: 100%;
+			margin-right: 20px;
 		}
 	}
 	&__item{

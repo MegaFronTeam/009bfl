@@ -78,6 +78,10 @@
 	}
 	h2 {
 		max-width: 750px;
+		@include media-breakpoint-down(xxl) {
+			line-height: 1;
+			font-size: rem(35);
+		}
 		span {
 			font-weight: 800;
 		}
@@ -89,6 +93,9 @@
 		font-weight: 700;
 		color: $gray-600;
 		max-width: 680px;
+		@include media-breakpoint-down(xxl) {
+			font-size: rem(20);
+		}
 		@include media-breakpoint-down(md) {
 			font-size: 16px;
 		}
@@ -99,6 +106,9 @@
 		margin-bottom: 50px;
 		font-size: rem(18);
 		color: $gray-600;
+		@include media-breakpoint-down(xxl) {
+			margin-bottom:35px;
+		}
 		@include media-breakpoint-down(md) {
 			margin-bottom: 30px;
 			order: 2;

@@ -389,7 +389,9 @@ ul {
 		// padding-right: rem(8);
 		margin-right: rem(24) !important;
 		display: inline-block;
-
+		@include media-breakpoint-down(md) {
+			margin-right: 15px !important;
+		}
 		&-active,
 		&:hover {
 			background-color: var(--bs-primary) ;
@@ -523,10 +525,12 @@ iframe {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'><path fill='#{$primary}' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/></svg>"); 
 }
 
-.swiper-wrapper{
-	
-	// @include row-sw(10px, sm, 100px);
+.swiper{
+	@include media-breakpoint-down(md) {
+		overflow: visible;
+	}
 }
+// @include row-sw(10px, sm, 100px);
 
 
 
@@ -572,8 +576,11 @@ iframe {
 }
 
 @mixin main-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 67px;
 	padding: 20px 24px;
-	display: block;
 	background: linear-gradient(93.2deg, #FF595E 6.15%, #FE3B7A 96.84%);
 	border: 1px solid #FF3D7A;
 	box-shadow: 0px 4px 24px rgba(255, 69, 114, 0.54);
@@ -582,6 +589,7 @@ iframe {
 	font-weight: 700;
 	text-align: center;
 	font-size: rem(18);
+	line-height: .98;
 	@include mt;
 	&:hover {
 		color: white;
@@ -599,4 +607,8 @@ iframe {
 	&:hover, &:focus {
 		color: $white;
 	}
+}
+
+.swiper {
+
 }

@@ -31,13 +31,14 @@
 			margin-right: 2%;
 		}
 		@include media-breakpoint-down(lg) {
-			width: 48%;
+			width: 49%;
 			&:not(:last-child) {
 				margin-right: 2%;
 			}
 		}
 		@include media-breakpoint-down(sm) {
 			width: 327px;
+			max-width: 100%;
 			&:not(:last-child) {
 				margin-right: 16px;
 			}

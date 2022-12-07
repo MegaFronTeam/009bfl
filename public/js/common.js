@@ -392,15 +392,15 @@ function eventHandler() {
 		// slidesPerView: 5,
 		// ...defaultSl,
 		// slidesPerView: 'auto',
-		freeMode: true,
+		// freeMode: true,
 		// loopFillGroupWithBlank: true,
 		// touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,		
+		// slideToClickedSlide: true,
+		// freeModeMomentum: true,		
 		navigation: false,
+		spaceBetween: 16,
 		breakpoints: {
 			320: {
-				spaceBetween: 16,
 				slidesPerView:1,
 			},
 			576: {

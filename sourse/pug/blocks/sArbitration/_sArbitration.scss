@@ -93,10 +93,11 @@
 	}
 	&__btn {
 		@include main-btn;
-		display: inline-block;
 		width: auto;
+		max-width: 280px;
 		@include media-breakpoint-down(md) {
 			width: 100%;
+			max-width: none;
 		}
 	}
 	&__name {

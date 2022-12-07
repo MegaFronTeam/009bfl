@@ -113,8 +113,12 @@
 		}
 	}
 	&__callback-text {
+		margin-right: 10px;
 		color: $gray-600;
 		font-weight: 700;
+		@include media-breakpoint-down(md) {
+			margin-right: 0;
+		}
 		span {
 			color: $primary;
 		}

@@ -280,7 +280,11 @@
 			content: '';
 			width: 82%;
 			height: 10px;
-			border-top: 1px dashed $primary;
+			// border-top: 1px dashed $primary;
+			background-position: center;
+			background-image: url(../img/svg/dashed.svg);
+			background-size: 100% 1px;
+			background-repeat: repeat-x;
 		}
 	}
 	&__counter {

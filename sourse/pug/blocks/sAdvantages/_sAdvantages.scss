@@ -20,7 +20,7 @@
 	.section-title{
 		position: relative;
 		z-index: 6;
-		span {
+		strong {
 			@include media-breakpoint-down(sm) {
 				color: $body-color;
 			}

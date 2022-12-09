@@ -278,7 +278,7 @@
 			left: 61px;
 			top: 20px;
 			content: '';
-			width: 82%;
+			width: calc(100% - 61px);
 			height: 10px;
 			// border-top: 1px dashed $primary;
 			background-position: center;
@@ -395,4 +395,10 @@
 			display: none;
 		}
 	}
+}
+
+@include media-breakpoint-down(md) {
+.sAloneSteps-slider{
+	margin-right: 20px;
+}
 }

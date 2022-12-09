@@ -36,6 +36,7 @@
 	&__slider {
 		margin-bottom: 70px;
 		@include media-breakpoint-down(lg) {
+			margin-right: 20px;
 			margin-bottom: 30px;
 			overflow: visible;
 		}

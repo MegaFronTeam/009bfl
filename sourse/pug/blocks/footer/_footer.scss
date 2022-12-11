@@ -10,8 +10,12 @@
 	}
 	&.policy {
 		--sPT: #{rem(72)};
+		@include media-breakpoint-up(md) {
 		border-top-left-radius: 70px;
 		border-top-right-radius: 70px;
+	}
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
 	}
 	@include media-breakpoint-down(md) {
 		--sPT: #{rem(100)};

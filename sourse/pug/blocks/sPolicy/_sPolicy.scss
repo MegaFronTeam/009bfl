@@ -26,6 +26,10 @@
 	&__item{
 
 	}
+	ul{
+		padding-left: 1rem;
+		// margin-left: 1rem;
+	}
 	ol {
 		padding-left: 0;
 		list-style: none;
@@ -52,13 +56,16 @@
 					font-size: rem(18);
 				}
 			}
+			li{
+				
+			}
 		}
 	}
 	p {
 		margin-bottom: 0;
 		color: $gray-600;
 	}
-	li:before {
+	ol li:before {
 		counter-increment: li;
 		content: counters(li, ".") ". ";
 		font-size: rem(36);

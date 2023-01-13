@@ -91,4 +91,13 @@
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+		.section-title{
+			display: block;
+		}
+		h2{
+			// font-size: 20px;
+			@include rfs(30px);
+		}
+	}
 } // end.sPolicy

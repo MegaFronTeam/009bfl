@@ -1,0 +1,21 @@
+mixin sThanks(data)
+	// start sThanks
+	+b.SECTION.sThanks.section#sThanks&attributes(attributes)
+		+e.container.container
+			img(src="img/sThanks-coin-1.png", alt="").coin-1
+			img(src="img/sThanks-coin-2.png", alt="").coin-2
+			+b.section-title.text-center
+				h1.h2 Ура!
+				h4 Спасибо за&nbsp;ваше обращение<br>Мы свяжемся с&nbsp;вами в&nbsp;самое ближайшее врем
+				p Связаться с нами прямо сейчас:
+			+e.row.row
+				.col-lg-5
+					+e.item.ms-lg-auto
+						+e.title Позвоните по номеру телефона
+						a(href="tel:+79668881097") +7 966 888 10 97
+				.col-lg-5
+					+e.item
+						+e.title Напишите в WhatsApp
+						a(href="https://wa.me/79668881097" target="_blank") +7 966 888 10 97
+			+e.btn(href='/') На главную
+	// end sThanks
